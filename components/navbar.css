@@ -1,0 +1,45 @@
+@import url("/home-style.css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Karla&family=Open+Sans:wght@400;700&display=swap');
+
+.navbar {
+    box-shadow: 0px 15px 10px -15px rgba(1, 28, 64, 0.2);
+    padding-right: 0;
+    margin-right: 0;
+  }
+ 
+.logo {
+    display: inline-block;
+    vertical-align: middle;
+    width: 9.94rem;
+    padding: 0.875rem 9.81rem 1.188rem 9.81rem;
+    margin-right: 17rem;
+  }
+
+ul{
+    display: inline-block;
+    font-size: 1.5rem;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+    
+}
+
+ul li{
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 6.5rem;
+    
+
+}
+
+ul li:first-child{
+    font-weight: bold;
+    font-weight: 700;
+    line-height: 45px;
+    border-bottom: 3px solid rgba(33, 33, 33, 1);
+ }
+
+ul li:last-child{
+    margin-right: 0;
+    padding: 25px;
+}

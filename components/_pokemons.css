@@ -1,0 +1,40 @@
+@import url(/components/navbar.css);
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Karla&family=Open+Sans:wght@400;700&display=swap');
+
+h1{
+    margin-top: 4.563rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family: 'Inter';
+    font-weight: normal;
+    font-size: 2.188rem;
+    letter-spacing: 0.3rem
+
+} 
+
+.search-bar{
+    display: flex;
+    box-shadow: 4px 4px 16px 0px rgba(1, 28, 64, 0.1);
+    border-radius: 2.5rem;
+    line-height: 4rem;
+    width: 68rem;
+    align-items: center;
+    justify-content: center;
+    align-self:center;
+    margin-left: 13rem;
+    padding-left: 1.938rem;
+
+}
+
+input{
+    color: rgba(118, 118, 118, 1);
+    border: transparent;
+    width: 100%;
+    height: 3.13rem;
+    
+}
+
+i{
+    color: rgba(118, 118, 118, 1);
+    padding-right: 1.938rem;
+}
