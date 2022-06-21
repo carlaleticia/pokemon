@@ -1,4 +1,3 @@
-@import url(/components/navbar.css);
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Karla&family=Open+Sans:wght@400;700&display=swap');
 
 h1{
@@ -19,22 +18,216 @@ h1{
     line-height: 4rem;
     width: 68rem;
     align-items: center;
-    justify-content: center;
-    align-self:center;
+    /* justify-content: center; */
     margin-left: 13rem;
     padding-left: 1.938rem;
-
+    background: rgba(245, 245, 245, 1);
 }
 
-input{
+.search{
     color: rgba(118, 118, 118, 1);
     border: transparent;
     width: 100%;
     height: 3.13rem;
-    
+    font-size: 1.2rem;
+    background: rgba(245, 245, 245, 1);
+    ;
+}
+
+.search::after{
+    border: transparent;
 }
 
 i{
     color: rgba(118, 118, 118, 1);
     padding-right: 1.938rem;
+}
+
+.selectors{
+    display: flex;
+}
+
+.checkbox-dropdown {
+    width: 10rem;
+    padding: .5rem;
+    padding-left: 2rem;
+    justify-content: center;
+    position: relative;
+    user-select: none;
+    /* align-items: center; */
+    margin-left: 5rem;
+    margin-top: 2rem;
+    background:rgba(245, 245, 245, 1);
+    border-radius: .3rem;
+    font-size: 0.9rem;
+    
+}
+
+.checkbox-dropdown:first-child{
+    margin-left: 14rem;
+}
+
+/* Display CSS arrow to the right of the dropdown text */
+.checkbox-dropdown:after {
+    content:'';
+    height: 0;
+    position: absolute;
+    width: 0;
+    border: 6px solid transparent;
+    border-top-color: gray;
+    top: 50%;
+    right: 1rem;
+    margin-top: -.2rem;
+}
+
+/* Reverse the CSS arrow when the dropdown is active */
+.checkbox-dropdown.is-active:after {
+    border-bottom-color: gray;
+    border-top-color: rgba(245, 245, 245, 1);
+    margin-top: -.5rem;
+    background: rgba(245, 245, 245, 1);
+}
+
+.checkbox-dropdown-ul {
+    margin: 0;
+    padding:.7rem;
+    position: absolute;
+    top: 100%; /* align the dropdown right below the dropdown text */
+    border-radius: .3rem;
+    border: inherit;
+    border-top: none;
+    height: 7.5rem;
+    left: -1px; /* align the dropdown to the left */
+    right: -1px; /* align the dropdown to the right */
+    opacity: 0; /* hide the dropdown */
+    transition: opacity 0.4s ease-in-out;
+    overflow: scroll;
+    overflow-x: hidden;
+    pointer-events: none; /* avoid mouse click events inside the dropdown */
+    background:rgba(245, 245, 245, 1);
+    
+}
+
+.checkbox-dropdown-ul:first-child{
+    margin-top: 0.3rem;
+}
+.is-active .checkbox-dropdown-ul {
+    opacity: 1; /* display the dropdown */
+    pointer-events: auto; /* make sure that the user still can select checkboxes */
+    background: rgba(245, 245, 245, 1);
+}
+
+.checkbox-dropdown-ul li {
+    padding: 0.2rem;
+    transition: all 0.2s ease-out;
+    background: rgba(245, 245, 245, 1);
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+    text-transform: capitalize;
+}
+
+.checkbox-dropdown-ul li input{
+    margin-right: 0.5rem;
+    /* margin-left: 1rem; */
+    align-self: center;
+    justify-content: justify;
+}
+
+/* .checkbox-css{
+    display:flex;
+    flex-direction: row-reverse;
+    text-transform: capitalize;
+    font-size: 0.9rem;
+    cursor: pointer;
+ } */
+
+
+#poke-container {
+    margin: auto;
+    margin-top: 1rem;
+    width: 90%;
+    min-width: 200px;
+    display: flex;
+    /* flex-direction: row-reverse; */
+    flex-wrap: wrap;
+    flex-basis: 22%;
+    justify-content: space-around;
+}
+
+.card {
+    display: flex;
+    /* flex-direction: row-reverse; */
+    width: 12rem;
+    height: 7rem;
+    /* padding: 0.3rem ; */
+    margin: .5rem;
+    background-color: rgb(61, 221, 176);
+    border-radius: .75rem;
+    box-shadow: 4px 4px 16px 0px rgba(1, 28, 64, 0.1);
+    color: white;
+
+}
+
+.info{
+    flex-basis: 50%;
+    margin-right: 0.1rem
+}
+
+
+.info h4{
+    font-size: 1.05rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: white;
+    padding-top: 1.3rem;
+    padding-bottom: 0.8rem;
+    justify-content: left;
+    padding-left: .8rem;
+    /* align-content: center;
+    justify-content: center;
+    align-self: center; */
+}
+
+
+.info ul li{
+    color: white;
+    justify-content: left;
+    padding-left: 1.2rem;
+    margin-bottom: 0.3rem;
+    text-transform: capitalize;
+    font-size: .9rem;
+}
+.info ul li::first-child{
+    margin-top: 0.2rem;
+ }
+
+.image{
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column-reverse;
+}
+
+.image img{
+    padding-bottom: 0.2rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    text-align: right;
+    padding-right: 0.1rem;
+    /* text-align: right;
+    text-align: end;
+    justify-content: right;
+    padding-top: 1rem; */
+}
+
+.image p{
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 0.5rem;
+    padding-top: 0.3rem;
+    /* align-content: right;
+    align-self: right; */
+    text-align: right;
+    padding-bottom: 0.5rem;
+    padding-right: .3rem;
 }

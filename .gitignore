@@ -1,0 +1,11 @@
+# Ignore a pasta node_modules
+node_modules
+
+package-lock.json
+package.json
+.package-lock.json
+
+# Ignore todos os arquivos de texto
+*.txt
+
+

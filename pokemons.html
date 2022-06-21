@@ -9,8 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter&family=Karla&family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/components/_pokemons.css">
     <link rel="stylesheet" href="/components/navbar.css">
-    <link rel="stylesheet" href="css/pico.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+     -->
     <title>Pokemóns</title>
 </head>
 <body>
@@ -19,76 +21,40 @@
         <a class="logo" href="/index.html">
             <img src="/assets/imgs/logo.png" width=159px>
         </a>
-        <ul>
-            <li><a href="/index.html">Home</li>
-            <li><a href="/pokemons.html">Pokémons</li>
-            <li><a href="#">Contato</li>
+        <ul class="navbar-group">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/pokemons.html">Pokémons</a></li>
+            <li><a href="/error404.html">Contact</a></li>
         </ul>
     </nav>
 
-<h1> Mais de 250 Pokémons para você escolher seu favorito</h1>
+<h1> More than 250 <b>Pokémons</b> for you to choose your favorite</h1>
 <div class="search-bar">
-    <input type="text" placeholder="Pesquisar pokémon">
-    <i class="fas fa-search"></i>
+    <input type="text" class="search" placeholder="Search pokémon">
+    <i class="fas fa-search" id="generate-pokemon"></i>
 </div>
 
-<div class="checkbox-dropdown">
-    Type
-    <ul class="checkbox-dropdown-list">
-        <li><label><input type="checkbox"/>Fire</label></li>
-        <li><label><input type="checkbox">Seed</label></li>
-        <li><label><input type="checkbox">Eletric</label></li>
-        <li><label><input type="checkbox">Water</label></li>
-        <li><label><input type="checkbox">Normal</label></li>
-        <li><label><input type="checkbox">Bug</label></li>
-        <li><label><input type="checkbox">Dark</label></li>
-        <li><label><input type="checkbox">Dragon</label></li>
-        <li><label><input type="checkbox">Rock</label></li>
-        <li><label><input type="checkbox">Fighting</label></li>
-        <li><label><input type="checkbox">Fairy</label></li>
-        <li><label><input type="checkbox">Flying</label></li>
-        <li><label><input type="checkbox">Poison</label></li>
-        <li><label><input type="checkbox">Steel</label></li>
-        <li><label><input type="checkbox">Ghost</label></li>
-        <li><label><input type="checkbox">Glass</label></li>
-        <li><label><input type="checkbox">Ground</label></li>
-        <li><label><input type="checkbox">Ice</label></li>
-        <li><label><input type="checkbox">Psychic</label></li>
-    </ul>
+<div class="selectors">
+    <div class="checkbox-dropdown"> Type
+        <ul class="checkbox-dropdown-ul" id="type">
+            <!-- <li><label><input type="checkbox"/>Normal</label></li> -->
+        </ul>
     </div>
 
+    <div class="checkbox-dropdown" id="attack">Attack</div>
 
-    <details role="list">
-        <summary aria-haspopup="listbox">Type</summary>
-        <ul role="listbox">
-            <li><label><input type="checkbox">Fire</label></li>
-            <li><label><input type="checkbox">Seed</label></li>
-            <li><label><input type="checkbox">Eletric</label></li>
-            <li><label><input type="checkbox">Water</label></li>
-            <li><label><input type="checkbox">Normal</label></li>
-            <li><label><input type="checkbox">Bug</label></li>
-            <li><label><input type="checkbox">Dark</label></li>
-            <li><label><input type="checkbox">Dragon</label></li>
-            <li><label><input type="checkbox">Rock</label></li>
-            <li><label><input type="checkbox">Fighting</label></li>
-            <li><label><input type="checkbox">Fairy</label></li>
-            <li><label><input type="checkbox">Flying</label></li>
-            <li><label><input type="checkbox">Poison</label></li>
-            <li><label><input type="checkbox">Steel</label></li>
-            <li><label><input type="checkbox">Ghost</label></li>
-            <li><label><input type="checkbox">Glass</label></li>
-            <li><label><input type="checkbox">Ground</label></li>
-            <li><label><input type="checkbox">Ice</label></li>
-            <li><label><input type="checkbox">Psychic</label></li>
-        </ul>
-      </details>
+    <div class="checkbox-dropdown" id="defense">Defesa</div>
 
-    <div>Ataque</div>
 
-    <div>Defesa</div>
+    
 </div>
+    <div id="container">
+        <div id="poke-container">
+                <!-- will hold the cards for all the pokemon -->
+        </div>
+    </div>
 
-<script src="/components/page2.js"></script>
-<script src="/cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"</script>
+<script  src="/components/selectors.js"></script>
+<script  src="/components/page2.js"></script>
 </body>
 </html>
