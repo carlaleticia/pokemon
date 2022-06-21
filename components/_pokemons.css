@@ -16,9 +16,12 @@ h1{
     box-shadow: 4px 4px 16px 0px rgba(1, 28, 64, 0.1);
     border-radius: 2.5rem;
     line-height: 4rem;
-    width: 68rem;
+    width: 72%;
+    position:relative;
+    align-self: center;
     align-items: center;
-    /* justify-content: center; */
+    justify-content: center;
+    text-align:center;
     margin-left: 13rem;
     padding-left: 1.938rem;
     background: rgba(245, 245, 245, 1);
@@ -27,7 +30,7 @@ h1{
 .search{
     color: rgba(118, 118, 118, 1);
     border: transparent;
-    width: 100%;
+    width: 90%;
     height: 3.13rem;
     font-size: 1.2rem;
     background: rgba(245, 245, 245, 1);
@@ -40,11 +43,13 @@ h1{
 
 i{
     color: rgba(118, 118, 118, 1);
-    padding-right: 1.938rem;
+    align-items: right;
+    /* padding-right: 1.938rem; */
 }
 
 .selectors{
     display: flex;
+    margin-bottom: 1rem;
 }
 
 .checkbox-dropdown {
@@ -146,7 +151,7 @@ i{
 #poke-container {
     margin: auto;
     margin-top: 1rem;
-    width: 90%;
+    width: 80%;
     min-width: 200px;
     display: flex;
     /* flex-direction: row-reverse; */
@@ -159,10 +164,10 @@ i{
     display: flex;
     /* flex-direction: row-reverse; */
     width: 12rem;
-    height: 7rem;
+    height: 7.5rem;
     /* padding: 0.3rem ; */
     margin: .5rem;
-    background-color: rgb(61, 221, 176);
+    background: hsla(159, 82%, 55%, 1);
     border-radius: .75rem;
     box-shadow: 4px 4px 16px 0px rgba(1, 28, 64, 0.1);
     color: white;
