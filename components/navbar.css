@@ -41,7 +41,6 @@
 
 .navbar-group li:last-child{
     margin-right: 0;
-    padding: 25px;
 }
 
 a {
@@ -90,6 +89,8 @@ a {
   }
   
   .active {
-    background-color: #04AA6D;
-    color: white;
+    font-weight: bold;
+    font-weight: 700;
+    line-height: 45px;
+    border-bottom: 3px solid rgba(33, 33, 33, 1);
   }

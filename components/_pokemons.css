@@ -108,7 +108,7 @@ i{
     transition: opacity 0.4s ease-in-out;
     overflow: scroll;
     overflow-x: hidden;
-    pointer-events: none; /* avoid mouse click events inside the dropdown */
+    pointer-events: none; avoid mouse click events inside the dropdown
     background:rgba(245, 245, 245, 1);
     
 }
@@ -150,22 +150,24 @@ i{
 
 #poke-container {
     margin: auto;
-    margin-top: 1rem;
-    width: 80%;
+    margin-top: 4rem;
+    width: 90%;
     min-width: 200px;
     display: flex;
     /* flex-direction: row-reverse; */
     flex-wrap: wrap;
-    flex-basis: 22%;
-    justify-content: space-around;
+    flex-basis: 20%;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .card {
     display: flex;
     /* flex-direction: row-reverse; */
-    width: 12rem;
-    height: 7.5rem;
+    width: 12.6rem;
+    height: 7.7rem;
     /* padding: 0.3rem ; */
+    
     margin: .5rem;
     background: hsla(159, 82%, 55%, 1);
     border-radius: .75rem;
@@ -196,13 +198,25 @@ i{
 
 
 .info ul li{
-    color: white;
+    color: black;
+    width: 4.5rem;
     justify-content: left;
-    padding-left: 1.2rem;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    /* padding-left: 1.2rem;
+    padding-right: 1.2rem; */
     margin-bottom: 0.3rem;
     text-transform: capitalize;
-    font-size: .9rem;
+    font-size: .75rem;
+    line-height: 1rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 1);
+    background-blend-mode: soft-light;
+    opacity: 40%;
+    border-radius: 2rem;
+    list-style: none;
 }
+
 .info ul li::first-child{
     margin-top: 0.2rem;
  }
@@ -227,7 +241,7 @@ i{
 
 .image p{
     font-size: 1.5rem;
-    color: white;
+    color: black;
     margin-top: 0.5rem;
     padding-top: 0.3rem;
     /* align-content: right;
@@ -235,4 +249,21 @@ i{
     text-align: right;
     padding-bottom: 0.5rem;
     padding-right: .3rem;
+    background-blend-mode: soft-light;
+    opacity: 10%;
 }
+
+
+.load-more {
+    background-color: #76daff;
+    background-image: linear-gradient(
+        315deg, #76daff 0%, #fcd000 74%);
+    border-radius: 6px;
+    border: 1px solid #c6c6c6;
+    color: #444;
+    padding: 0.5rem 1.5rem;
+    min-width: 20%;
+    margin-top: 1rem;
+    font-family: "Satisfy", cursive;
+    }
+    

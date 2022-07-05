@@ -4,10 +4,32 @@ function renderEverything() {
   let allPokemonContainer = document.querySelector("#poke-container");
   allPokemonContainer.innerText = "";
   fetchPokemon();
+
+
+  (function($) {
+    //Setamos o valor inicial
+    let fetchPokemonShow = 24;
+  
+    //escondemos todos os elementos maior que o valor inicial
+    $("#poke-container").slice(fetchPokemonShow).hide();
+  
+    $('#load-more').click(function() {
+  
+      //Somamos a quantidade nova a ser exibida
+      fetchPokemonShow += 24;
+  
+      //Rodamos o loop no valor total
+      for (let i = 0; i < fetchPokemonShow; i++) {
+        //Mostramos o item
+        $('#poke-containeri').eq(i).show();
+      }
+    });
+  
+  }(jQuery));
 }
 
 function fetchPokemon() {
-  fetch("https://pokeapi.co/api/v2/pokemon?limit=354")
+  fetch("https://pokeapi.co/api/v2/pokemon?limit=24")
     .then((response) => response.json())
     .then(function (allpokemon) {
       allpokemon.results.forEach(function (pokemon) {
@@ -18,23 +40,58 @@ function fetchPokemon() {
 
 function fetchPokemonData(pokemon) {
   let url = pokemon.url; // <--- this is saving the pokemon url to a variable to use in the fetch.
-  //Example: https://pokeapi.co/api/v2/pokemon/1/"
   fetch(url)
     .then((response) => response.json())
     .then(function (pokeData) {
       let dropdownTypes = document.getElementById("type");
       const { types } = pokeData;
 
-      // types.forEach((type) => {
-      //   dropdownTypes.insertAdjacentHTML(
-      //     "afterbegin",
-      //     `<li><label><input type="checkbox"/>${type}</label></li>`
-      //   );
-      // });
+      // const { colors } = changeBgColor;
 
       renderPokemon(pokeData);
+      
     });
 }
+
+
+
+
+
+const colorsNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const findPokemonColors = (nums) => {
+  const speciesData = [];
+  nums.forEach((num) => {
+      fetch(`https://pokeapi.co/api/v2/pokemon-color/${num}`)
+      .then((response) => response.json())
+      .then(function (dataColors){
+          const {name, pokemon_species} = dataColors;
+        speciesData.push({
+          name,
+          species: pokemon_species
+        })
+      })
+    }
+  )
+  return speciesData
+}
+
+const pokeColorData = findPokemonColors(colorsNums);
+// const blackPokemons = [];
+
+// pokeColorData.forEach((obj) => {
+//   if (obj.name === 'blue') {
+//     blackPokemons.push(obj.species)
+//   }
+// })
+
+
+pokeColorData.forEach((colorObj) => {
+  if (colorObj.species.includes(pokeData.species.name)) {
+    pokeContainer.style.backgroundColor = colorObj.name
+  } else {
+    console.log('fuck')
+  }
+})
 
 function renderPokemon(pokeData) {
   let allPokemonContainer = document.getElementById("poke-container");
@@ -64,6 +121,7 @@ function renderPokemon(pokeData) {
   pokeContainer.append(infoContainer, imgContainer); //appending that imgContaine div to the main div which will hold all the pokemon cards
 
   allPokemonContainer.append(pokeContainer);
+
 }
 
 function createTypes(types, ul) {
@@ -71,7 +129,7 @@ function createTypes(types, ul) {
     let typeLi = document.createElement("li");
     typeLi.innerText = type["type"]["name"];
     ul.append(typeLi);
-  });
+  }); 
 }
 
 let dropdownTypes = document.getElementById("type");
@@ -83,8 +141,6 @@ const getPokemonTypes = () => {
 
       const typesArray = [];
       results.forEach((resultObj) => typesArray.push(resultObj.name));
-
-      console.log(typesArray);
 
       typesArray.forEach((type) => {
         
@@ -102,33 +158,27 @@ const getPokemonTypes = () => {
     });
 };
 
-
-
-
 getPokemonTypes();
-
-// let dropdownTypes = document.getElementById("type");
-// const createDropdown = (types) => {
-//   console.log(types);
-//   types.forEach((type) => {
-//     dropdownTypes.insertAdjacentHTML(
-//       "afterbegin",
-//       `<li><label><input type="checkbox"/>${type}</label></li>`
-//     );
-//   });
-// };
-
-// createDropdown(typesList);
 
 function createPokeImage(pokeID, containerDiv) {
   let pokeImgContainer = document.createElement("div");
   pokeImgContainer.classList.add("image");
-  // pokeImgContainer.style="flex"
   let pokeImage = document.createElement("img");
   pokeImage.srcset = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokeID}.svg`;
   pokeImgContainer.append(pokeImage);
   containerDiv.append(pokeImgContainer);
+  
+  
+
+  // function changeBgColors(colors){
+  //   colors.forEach(function (cardColor){
+  //   cardColor.classList.add("`$color`");
+  //   });
+  // }
+
 }
+
+
 
 // Make the drowpdown
 
@@ -137,33 +187,6 @@ dropdownStart.addEventListener("click", (e) => {
   dropdownStart.classList.toggle("is-active");
 });
 
-/////////////
+////////////
 
-// let dropdownTypes = document.getElementById('type');
-// dropdownTypes.insertAdjacentHTML('afterbegin', `<li><label><input type="checkbox"/>${type}</label></li>`);
-
-// document.body.onload = adcElemento;
-
-// function adcElemento () {
-//   // cria um novo elemento div
-//   // e dá à ele conteúdo
-//   let divNova = document.createElement("li");
-//   let conteudoNovo = document.createElement("input").type('checkbox')
-//   divNova.appendChild(conteudoNovo); //adiciona o nó de texto à nova div criada
-
-//   // adiciona o novo elemento criado e seu conteúdo ao DOM
-//   let divAtual = document.getElementById("type");
-//   document.body.insertafter(divNova, divAtual);
-// }
-
-// function deleteEverything(event){
-//   event.target.style = 'none';
-//   let allPokemonContainer = document.querySelector('#poke-container')
-//   allPokemonContainer.innerText = ""
-
-// let generateBtn = document.createElement('button')
-// generateBtn.classList.add('secondary', 'button')
-// generateBtn.addEventListener('DOMContentLoaded', renderEverything);
-
-// allPokemonContainer.append(generateBtn)
-// }
+// const colors = ['black', 'blue', 'brown', 'gray', 'green', 'pink', 'purple', 'red', 'white'];
