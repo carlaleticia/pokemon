@@ -1,0 +1,61 @@
+@import url('/components/_reset.css');
+@import url('/components/styles/navbar.css');
+
+
+
+.container{
+    display: flex;
+    margin-top: 12.375rem;
+    margin-bottom: 1.25rem;
+    /* background-image: url('/assets/imgs/home\ page.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain; */
+
+  }
+  
+
+.text{
+    flex-basis: 50%;
+    padding-left: 9.81rem;
+}
+
+.text h1{
+    font-size: 3.375rem;
+    font-weight: bolder;
+    line-height: 4.75rem;
+    margin-bottom: 1.125rem;
+    
+}
+
+.text p{
+    font-size: 1rem;
+    line-height: 2.25rem;
+    letter-spacing: 2%;
+    margin-bottom: 2.5rem;
+}
+
+.btn {
+   background-color: var(--card);
+   border-color: var(--card);
+   color: var(--white);
+   font-size: 1.25rem;
+   font-weight: bold;
+   box-shadow: var(--shadow);
+   border-radius: 0.688rem;
+   text-align: center;
+   padding: 1rem;
+   cursor: pointer;
+   margin-top: 2rem;
+}
+
+
+
+.pikachu{
+    margin-bottom: -6.92%;
+    float:right;
+    width: 793px;
+    height: 727px;
+    margin-right: -2;
+    margin-top: -8rem;
+}

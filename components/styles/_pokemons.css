@@ -1,40 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Karla&family=Open+Sans:wght@400;700&display=swap');
+@import url('/components/styles/_reset.css');
+@import url('/components/styles/navbar.css');
 
 h1{
     margin-top: 4.563rem;
     margin-bottom: 2rem;
     text-align: center;
-    font-family: 'Inter';
+    font-family: var(--font);
     font-weight: normal;
     font-size: 2.188rem;
-    letter-spacing: 0.3rem
+    letter-spacing: 0.25rem
 
 } 
 
 .search-bar{
-    display: flex;
-    box-shadow: 4px 4px 16px 0px rgba(1, 28, 64, 0.1);
-    border-radius: 2.5rem;
-    line-height: 4rem;
-    width: 72%;
-    position:relative;
-    align-self: center;
-    align-items: center;
-    justify-content: center;
-    text-align:center;
-    margin-left: 13rem;
-    padding-left: 1.938rem;
-    background: rgba(245, 245, 245, 1);
+    display: block;
+    box-shadow: var(--shadow);
+    border-radius: 2rem;
+    line-height: 3.5rem;
+    width: 75%;
+    margin: auto;
+    background: var(--white);
+    
 }
 
-.search{
-    color: rgba(118, 118, 118, 1);
+.search-bar input{
+    background-color: transparent;
     border: transparent;
-    width: 90%;
-    height: 3.13rem;
+    width: 95%;
+    height: 3.5rem;
+    cursor: pointer;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    padding-left: 2rem;
     font-size: 1.2rem;
-    background: rgba(245, 245, 245, 1);
-    ;
+}
+
+.search-bar button{
+    border: transparent;
+    background-color: transparent;
+}
+.search-bar button img{
+    vertical-align: middle;
 }
 
 .search::after{
@@ -42,8 +48,9 @@ h1{
 }
 
 i{
-    color: rgba(118, 118, 118, 1);
+    color: var(--checkbox);
     align-items: right;
+
     /* padding-right: 1.938rem; */
 }
 
@@ -59,10 +66,9 @@ i{
     justify-content: center;
     position: relative;
     user-select: none;
-    /* align-items: center; */
     margin-left: 5rem;
     margin-top: 2rem;
-    background:rgba(245, 245, 245, 1);
+    background:var(--white);
     border-radius: .3rem;
     font-size: 0.9rem;
     
@@ -79,7 +85,7 @@ i{
     position: absolute;
     width: 0;
     border: 6px solid transparent;
-    border-top-color: gray;
+    border-top-color: var(--checkbox);
     top: 50%;
     right: 1rem;
     margin-top: -.2rem;
@@ -87,10 +93,10 @@ i{
 
 /* Reverse the CSS arrow when the dropdown is active */
 .checkbox-dropdown.is-active:after {
-    border-bottom-color: gray;
-    border-top-color: rgba(245, 245, 245, 1);
+    border-bottom-color: var(--checkbox);
+    border-top-color: var(--white);
     margin-top: -.5rem;
-    background: rgba(245, 245, 245, 1);
+    background: var(--white);
 }
 
 .checkbox-dropdown-ul {
@@ -108,8 +114,8 @@ i{
     transition: opacity 0.4s ease-in-out;
     overflow: scroll;
     overflow-x: hidden;
-    pointer-events: none; avoid mouse click events inside the dropdown
-    background:rgba(245, 245, 245, 1);
+    pointer-events: none; /*avoid mouse click events inside the dropdown */
+    background: var(--white);
     
 }
 
@@ -118,14 +124,14 @@ i{
 }
 .is-active .checkbox-dropdown-ul {
     opacity: 1; /* display the dropdown */
-    pointer-events: auto; /* make sure that the user still can select checkboxes */
-    background: rgba(245, 245, 245, 1);
+    pointer-events: auto; /* user can select checkboxes */
+    background: var(--white);
 }
 
 .checkbox-dropdown-ul li {
     padding: 0.2rem;
     transition: all 0.2s ease-out;
-    background: rgba(245, 245, 245, 1);
+    background: var(--white);
     display:flex;
     flex-direction: row-reverse;
     justify-content: left;
@@ -134,19 +140,9 @@ i{
 
 .checkbox-dropdown-ul li input{
     margin-right: 0.5rem;
-    /* margin-left: 1rem; */
     align-self: center;
     justify-content: justify;
 }
-
-/* .checkbox-css{
-    display:flex;
-    flex-direction: row-reverse;
-    text-transform: capitalize;
-    font-size: 0.9rem;
-    cursor: pointer;
- } */
-
 
 #poke-container {
     margin: auto;
@@ -154,7 +150,6 @@ i{
     width: 90%;
     min-width: 200px;
     display: flex;
-    /* flex-direction: row-reverse; */
     flex-wrap: wrap;
     flex-basis: 20%;
     justify-content: space-evenly;
@@ -163,16 +158,13 @@ i{
 
 .card {
     display: flex;
-    /* flex-direction: row-reverse; */
     width: 12.6rem;
     height: 7.7rem;
-    /* padding: 0.3rem ; */
-    
     margin: .5rem;
-    background: hsla(159, 82%, 55%, 1);
+    background: var(--card);
     border-radius: .75rem;
-    box-shadow: 4px 4px 16px 0px rgba(1, 28, 64, 0.1);
-    color: white;
+    box-shadow: var(--shadow);
+    color: var(--white);
 
 }
 
@@ -186,31 +178,26 @@ i{
     font-size: 1.05rem;
     font-weight: bold;
     text-transform: capitalize;
-    color: white;
+    color: var(--white);
     padding-top: 1.3rem;
     padding-bottom: 0.8rem;
     justify-content: left;
     padding-left: .8rem;
-    /* align-content: center;
-    justify-content: center;
-    align-self: center; */
 }
 
 
 .info ul li{
-    color: black;
+    color: var(--black);
     width: 4.5rem;
     justify-content: left;
     margin-right: 0.5rem;
     margin-left: 0.5rem;
-    /* padding-left: 1.2rem;
-    padding-right: 1.2rem; */
     margin-bottom: 0.3rem;
     text-transform: capitalize;
     font-size: .75rem;
     line-height: 1rem;
     text-align: center;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: var(--white);
     background-blend-mode: soft-light;
     opacity: 40%;
     border-radius: 2rem;
@@ -233,19 +220,13 @@ i{
     height: 4.5rem;
     text-align: right;
     padding-right: 0.1rem;
-    /* text-align: right;
-    text-align: end;
-    justify-content: right;
-    padding-top: 1rem; */
 }
 
 .image p{
     font-size: 1.5rem;
-    color: black;
+    color: var(--black);
     margin-top: 0.5rem;
     padding-top: 0.3rem;
-    /* align-content: right;
-    align-self: right; */
     text-align: right;
     padding-bottom: 0.5rem;
     padding-right: .3rem;
@@ -254,16 +235,57 @@ i{
 }
 
 
-.load-more {
-    background-color: #76daff;
-    background-image: linear-gradient(
-        315deg, #76daff 0%, #fcd000 74%);
-    border-radius: 6px;
-    border: 1px solid #c6c6c6;
-    color: #444;
-    padding: 0.5rem 1.5rem;
-    min-width: 20%;
-    margin-top: 1rem;
-    font-family: "Satisfy", cursive;
-    }
-    
+.card .black{
+    background-color: var(--checkbox);
+}
+
+.card .blue{
+    background-color: var(--blue);
+}
+
+.card .brown{
+    background-color: var(--brown);
+}
+
+.card .gray{
+    background-color: var(--gray);
+}
+
+.card .green{
+    background-color: var(--card);
+}
+
+.card .pink{
+    background-color: var(--pink);
+}
+
+.card .purple{
+    background-color: var(--purple);
+}
+
+.card .red{
+    background-color: var(--light-red);
+}
+
+.card .white{
+    background-color: var(--dark-white);
+}
+
+
+.btn-load{
+    background-color: var(--yellow);
+    border-color: var(--yellow);
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: var(--shadow);
+    border-radius: 0.8rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    cursor: pointer;
+    display: block;
+    margin: 2rem auto;
+    padding-right: 2rem;
+    padding-left: 2rem;
+}

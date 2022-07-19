@@ -4,40 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Carla Almeida">
     <link rel="icon" type="image/png" href="/assets/imgs/pokebola.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Karla&family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="home-style.css">
-    <link rel="stylesheet" href="/components/navbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/components/styles/home-style.css">
     <title>Home</title>
 </head>
 <body>
 
-    <!------ navigation menu ------>
 <nav class="navbar">
     <a class="logo" href="/index.html">
         <img src="/assets/imgs/logo.png" width=159px>
     </a>
     <ul class="navbar-group">
         <li id="nav-li" class="active"><a href="/index.html">Home</a></li>
-        <li id="nav-li"><a href="/pokemons.html">Pokémons</a></li>
-        <li id="nav-li"><a href="/error404.html">Contact</a></li>
+        <li id="nav-li"><a href="/components/pages/pokemons.html">Pokémons</a></li>
+        <li id="nav-li"><a href="/components/pages/errorpage.html">Contact</a></li>
     </ul>
 </nav>
 
-<div class="container">
+<main class="container">
     <div class="text">
         <h1>Which Pokémon would you <mark>choose</mark>?</h1>
             <p>Check out the Pokémon's type, strengths, weaknesses and abilities.</p>
-            <button class="btn"><a href='pokemons.html'>See Pokémons</a></button>
+            <button class="btn"><a href='/components/pages/pokemons.html'>See Pokémons</a></button>
     </div>
     
     <div class="pikachu">
-        <img src="/assets/imgs/home page.png" width="793px" height="727px" class="float-right pikachu-homepage" alt="pikachu">
+        <img src="/assets/imgs/home page.png" width="785px" height="680px" class="pikachu-homepage" alt="pikachu">
     </div>
-</div>
+</main>
 
 </body>
 </html>

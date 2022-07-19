@@ -1,0 +1,46 @@
+@import url('/components/styles/_reset.css');
+@import url('/components/styles/home-style.css');
+
+.navbar {
+  box-shadow: var(--shadow);
+  padding-right: 0;
+  margin-right: 0;
+}
+ 
+.logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 9.94rem;
+  padding: 0rem 9.81rem 1.188rem 9.81rem;
+  margin-right: 17rem;
+  }
+
+.navbar-group{
+  display: inline-block;
+  font-size: 1.5rem;
+  font-family:var(--font);
+  text-decoration: none;
+  list-style-type: none;
+    
+}
+
+.navbar-group li{
+  display: inline-block;
+  margin-top: 30px;
+  margin-left: 6.5rem;
+}
+
+.navbar-group li:last-child{
+  margin-right: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.active {
+  font-weight: bolder;
+  font-weight: 700;
+  line-height: 45px;
+  border-bottom: 3px solid rgba(33, 33, 33, 1);
+}

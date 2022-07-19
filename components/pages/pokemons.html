@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Carla Almeida">
+    <link rel="icon" type="image/png" href="/assets/imgs/pokebola.png">
+    <link rel="stylesheet" href="/components/styles/_pokemons.css">
+    <link rel="stylesheet" href="/components/styles/navbar.css">
+    <link rel="stylesheet" href="/components/styles/_reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Pokemóns</title>
+</head>
+<body>
+    <nav class="navbar">
+        <a class="logo" href="/index.html">
+            <img src="/assets/imgs/logo.png" width=159px>
+        </a>
+        <ul class="navbar-group">
+            <li id="nav-li"><a href="/index.html">Home</a></li>
+            <li id="nav-li" class="active"><a href="/components/pages/pokemons.html">Pokémons</a></li>
+            <li id="nav-li"><a href="/components/pages/errorpage.html">Contact</a></li>
+        </ul>
+    </nav>
+
+<h1> More than 250 <b>Pokémons</b> for you to choose your favorite</h1>
+
+<form id="searchBar" class="search-bar" >
+    <input type="text" placeholder="Search pokémon" name="search" id="userInput">
+    <button type="submit" id="submit">
+        <img src="/assets/imgs/pokebola.png" width="25px" alt="pokebola">
+    </button>
+</form>
+
+<div class="selectors"> 
+    <!-- will hold the checkbox with types -->
+    <form class="checkbox-dropdown"> Type
+        <ul class="checkbox-dropdown-ul" id="type">
+            <!--types checkbox goes here -- added with JS-->
+        </ul>
+    </form>
+
+    <form class="checkbox-dropdown" id="attack">Attack</form>
+
+    <form class="checkbox-dropdown" id="defense">Defesa</form>
+
+
+</div>
+
+
+    <container id="container">
+        <div id="poke-container" id="loadMore">
+                <!-- will hold the cards for all the pokemon -->
+        </div>
+
+        <div class="load-more-btn">
+            <button class="btn-load" onclick="loadMoreBtn()" id="loadMoreBtn">Load More</button>
+          </div>
+
+    </container>
+
+    
+    
+<script  src="/components/scripts/selectors.js"></script>
+<!-- <script  src="/components/scripts/checkbox.js"></script>
+<script  src="/components/scripts/pokemons.js"></script> -->
+</body>
+</html>
