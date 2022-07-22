@@ -1,0 +1,140 @@
+@import url('/components/styles/_reset.css');
+@import url('/components/styles/navbar.css');
+@import url('/components/styles/_pokemons.css');
+
+
+.displayCard{
+    background-color: var(--card);
+    z-index: 3;
+    margin: auto;
+    align-items: center;
+    width: 50vw;
+}
+
+.pokeCard{
+    display: flex;
+}
+
+.pokeImgCard{
+    display: block;
+    flex-basis: 50%;
+}
+
+.pokeType{
+    color: var(--black);
+    width: 4.5rem;
+    justify-content: left;
+    margin-left: 0.5rem;
+    margin-bottom: 0.3rem;
+    text-transform: capitalize;
+    font-size: .75rem;
+    line-height: 1rem;
+    text-align: center;
+    background-color: var(--white);
+    background-blend-mode: soft-light;
+    opacity: 40%;
+    border-radius: 2rem;
+    list-style: none;
+}
+
+.pokeType:first-child{
+    margin-top: 0.2rem;
+}
+
+.pokeInfoCard{
+    /* flex-basis: 50%; */
+    margin-right: 0.1rem;
+}
+
+.pokeInfo{
+    display: flex;
+}
+
+.pokeTitle{
+    flex-basis: 80%;
+}
+
+.pokeName{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    padding-top: 1.3rem;
+    padding-bottom: 0.5rem;
+    justify-content: left;
+    padding-left: .8rem;
+    opacity: 80%;
+
+}
+
+.pokeId{
+    font-size: 1.5rem;
+    color: var(--black);
+    margin-top: 0.5rem;
+    padding-top: 0.3rem;
+    text-align: right;
+    justify-content: right;
+    margin: auto;
+    background-blend-mode: soft-light;
+    /* opacity: 10%; */
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: bisque;
+}
+
+.pokeGen{
+    font-size: .9rem;
+    color: var(--black);
+    padding-top: 0.3rem;
+    text-align: right;
+    justify-content: right;
+    padding-right: .3rem;
+    background-blend-mode: soft-light;
+    opacity: 10%;
+}
+
+.pokeAbilities{
+    background-color: var(--white);
+    color: var(--black);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 2rem;
+    border: 0.2rem solid var(--black);
+}
+
+.points{
+    display: flex;
+    margin: auto;
+    align-items: flex-end;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 2rem;
+    border: 0.2rem solid var(--black);
+}
+
+.pokeHealth{
+    margin-left: 3rem;
+}
+
+.pokeAttack, .pokeDefense, .pokeAttackSuper, .pokeDefenseSuper{
+    border-radius: 50%;
+    background-color: var(--white);
+    color: var(--black);
+    width: 80px;
+    height: 80px;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+    display: block-inline;
+    margin-top: 2rem;
+    margin: 1rem;
+    padding: 1.5rem;
+    border: 0.2rem solid var(--black);
+}
+
+.pokeRangers {
+    display: flex;
+    background-color: azure;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}

@@ -1,21 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap);
 
 :root{
-    --font: 'Inter', sans-serif;
+    --font: Inter; sans-serif;
     --weight: bold;
     --yellow: #f5db13;
     --black: #000814;
-    --green: #74d3ae;
+    --gray: #595959;
     --card: #2eeaa8;
     --red: #de0d0de9;
-    --light-red: #e56b6f;
     --white: #f5f5f5;
-    --dark-white: #e4e1df;
-    --gray: #e6e6e6c8;
-    --blue: #81c3d7;
-    --brown:#ad948e;
-    --pink: #f5cac3;
-    --purple: #9f86c0;
     --checkbox: #949494;
     --shadow: 0px 15px 10px -15px #011c4033;
 
