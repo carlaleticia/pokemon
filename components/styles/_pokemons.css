@@ -256,3 +256,7 @@ i{
     padding-left: 2rem;
 }
 
+#text{
+    color: transparent;
+    display: none;
+}

@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap);
 
 :root{
-    --font: Inter; sans-serif;
+    --font: Inter, sans-serif;
     --weight: bold;
     --yellow: #f5db13;
     --black: #000814;
@@ -24,4 +24,22 @@
 
 a{
     text-decoration: none;
+}
+
+footer{
+    text-align: right;
+    display: block;
+    justify-content: space-evenly;
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-top: 3rem;
+    margin: auto;
+    padding: 1rem;
+    
+}
+footer p, footer a, footer a i {
+    display: inline-block;
+    justify-content: space-between;
+    margin-right: 1rem;
+    color: var(--gray);
 }
