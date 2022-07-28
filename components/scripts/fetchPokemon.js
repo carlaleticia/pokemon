@@ -8,7 +8,7 @@ loadMoreBtn.addEventListener('click', (e) => {
 });
 
 const pokeColors = {
-	normal: '#F5F5F5',
+	normal: '#f8edeb',
 	fire: '#ffcfd2',
 	grass: '#b9fbc0',
 	electric: '#fbf8cc',
@@ -49,10 +49,11 @@ const createPokemonCard = (pokemon) => {
 	const pokeId = pokemon.id.toString().padStart(3, '0');
 
 	const pokeAllTypes = pokemon.types.map((type) => type.type.name);
-	const types = pokeAllTypes.map((type) => {
-		// Study this part
-		return `<ul class="pokeType">${type}</ul>`;
-	});
+	// const types = pokeAllTypes.map((type) => {
+	// 	// Study this part
+	// 	return `<ul class="pokeType">${type}</ul>`;
+	// });
+	const types = pokeAllTypes.join('\r\n');
 
 	const pokeType = pokeMainTypeColor.find((type) => pokeAllTypes.indexOf(type) > -1); //  get the bgcolor for the card
 	const pokeColor = pokeColors[pokeType];
@@ -62,7 +63,7 @@ const createPokemonCard = (pokemon) => {
 	const pokemonInnerHTML = `
     <div class="info">
         <h4 class="pokeName">${pokeName}</h4>
-        ${types}
+        <ul class="pokeType">${types}</ul>
 
     </div>
     <div class="pokeImg">
@@ -161,5 +162,5 @@ const createPokemonFullCard = (pokemon) => {
 };
 
 fetchPokemons();
-const card = document.querySelector.getElementsByClassName('card');
-card.addEventListener('click', (createPokemonFullCard.innerHTML = displayInfoInnerHTML));
+// const card = document.querySelector.getElementsByClassName('card');
+// card.addEventListener('click', (createPokemonFullCard.innerHTML = displayInfoInnerHTML));

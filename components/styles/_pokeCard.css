@@ -65,22 +65,6 @@
 
 }
 
-.pokeId{
-    font-size: 1.5rem;
-    color: var(--black);
-    margin-top: 0.5rem;
-    padding-top: 0.3rem;
-    text-align: right;
-    justify-content: right;
-    margin: auto;
-    background-blend-mode: soft-light;
-    /* opacity: 10%; */
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    background-color: bisque;
-}
-
 .pokeGen{
     font-size: .9rem;
     color: var(--black);
